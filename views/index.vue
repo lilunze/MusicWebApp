@@ -1,8 +1,14 @@
 <template>
-	<div></div>
+	<v-nav></v-nav>
 </template>
 <script>
-	export default {}
+	import vNav from './v-nav.vue';
+	export default {
+		components:
+		{
+			vNav
+		}
+	}
 </script>
 <style scoped>
 	
