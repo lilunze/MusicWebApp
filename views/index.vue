@@ -3,18 +3,21 @@
 		<v-nav></v-nav>
 		<v-tag-list></v-tag-list>
 		<v-carousel></v-carousel>
+		<v-daily-recommend></v-daily-recommend>
 	</div>
 </template>
 <script>
 	import vNav from './v-nav.vue';
 	import vTagList from './v-tag-list.vue';
 	import vCarousel from './v-carousel.vue';
+	import vDailyRecommend from './v-daily-recommend.vue';
 	export default {
 		components:
 		{
 			vNav,
 			vTagList,
-			vCarousel
+			vCarousel,
+			vDailyRecommend
 		}
 	}
 </script>
