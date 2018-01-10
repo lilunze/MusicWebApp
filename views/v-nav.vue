@@ -1,8 +1,8 @@
 <template>
 	<div class="nav">
-		<div class="search">搜索</div>
-		<div class="logo">logo</div>
-		<div class="play">正在播放</div>
+		<i class="search"></i>
+		<img src="/src/images/logo/logo-b.png" class="logo">
+		<i class="play"></i>
 	</div>
 </template>
 <script>
@@ -11,5 +11,33 @@
 	}
 </script>
 <style scoped>
-	
+	.nav
+	{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0.5rem 0.5rem;
+		text-align: center;
+	}
+	.search
+	{
+		display: inline-block;
+		width: 1.8rem;
+		height: 1.8rem;
+		background: url(/src/images/icon/icon-search.png);
+		background-size: 100% 100%;
+		float: left;
+	}
+	.play
+	{
+		display: inline-block;
+		width: 1.8rem;
+		height: 1.8rem;
+		background: url(/src/images/icon/icon-play.png);
+		background-size: 100% 100%;
+		float: right;
+	}
+	.logo
+	{
+		width: 4rem;
+	}
 </style>
