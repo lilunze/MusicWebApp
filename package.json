@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --host 192.168.0.183 --open --history-api-fallback --config webpack.config.js",
+    "dev": "webpack-dev-server --host 192.168.2.198 --open --history-api-fallback --config webpack.config.js",
     "build": "webpack --progress --hide-modules --config webpack.prod.config.js"
   },
   "author": "lilunze",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^0.17.1",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
