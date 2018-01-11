@@ -1,6 +1,6 @@
 <template>
 	<main>
-        <agile :arrows="false">
+        <agile :arrows="false" :autoplay="true" :speed="1000" :fade="true" :autoplaySpeed="5000" :dots="false">
             <div class="slide">
                 <a href="sound.html?id=1490529"><img src="https://ws-qn-echo-image-cdn.app-echo.com/Fi_-LEVfodBayt46mY-dzQAKPKPe.jpg?imageMogr2/auto-orient/quality/100%7CimageView2/4/w/640/q/100"></a>
             </div>
@@ -41,32 +41,6 @@
     .slide a img
     {
     	width: 100%;
-    }
-
-    .agile__dots 
-    {
-        text-align: center;
-    }
-    .agile__dot
-    {
-		display: inline-block;
-		width: 0.2rem;
-		height: 0.2rem;
-		border-radius: 50%;
-    }
-    .agile__dot button 
-    {
-        background-color: transparent;
-        border: 1px solid #fff;
-    }
-    .agile__dot button:hover 
-    {
-        background-color: #fff;
-    }
-
-    .agile--current button
- 	{
-        background-color: #fff;
     }
 
 </style>
