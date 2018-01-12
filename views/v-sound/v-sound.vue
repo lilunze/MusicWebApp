@@ -9,8 +9,8 @@
                 <img  src="https://y.gtimg.cn/music/photo_new/T002R300x300M0000011K2LD2aPDmu.jpg?max_age=2592000" alt="">
             </a>
             <div class="titles">
-                <h3 class="musicName">东京不太热</h3>
-                <div class="singerName">排骨教主</div>
+                <h3 class="musicName">{{soundList.name}}</h3>
+                <div class="singerName">{{soundList.name}}</div>
             </div>
         </div>
         <div class="w-progress">
@@ -27,16 +27,30 @@
 <script>
 import mProgress from './m-progress.vue';
 import mControl from './m-control.vue';
+import axios from 'axios';
+import qs from 'qs';
 
 export default {
     data () {
         return {
-
+            soundList: {}
         }
     },
-    mounted:function(){
-      var orderHeight=window.innerHeight;
-      document.getElementById("onplay").style.height=orderHeight+'px';
+    created () {
+        var _this = this
+        var id = location.search;
+        var local_id=localStorage.getItem('sound_id');
+        id= id.substring(4,id.length)||local_id;
+        localStorage.setItem('sound_id',id);
+        axios.post('http://www.lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/sound/info?id="+id+"&comment=1"}))
+        .then(function(res){
+            _this.soundList = res.data.info
+            console.log(_this.soundList)
+        })
+    },
+    mounted () {
+        var orderHeight=window.innerHeight;
+        document.getElementById("onplay").style.height=orderHeight+'px';
   },
   components: {
       mProgress,

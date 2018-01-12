@@ -22,9 +22,9 @@ const Routers=[
 		}
 	},
 	{
-		path:'/onplay',
+		path:'/sound',
 		component:function(resolve){
-			return require(['./views/onplay/onplay.vue'],resolve);
+			return require(['./views/v-sound/v-sound.vue'],resolve);
 		}
 	}
 	// {
