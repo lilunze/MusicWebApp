@@ -44,6 +44,7 @@
 <style scoped>
 	.tag-list
 	{
+		background: #fff;
 		width: 100%;
 		margin: 0;
 		box-sizing: border-box;
