@@ -6,19 +6,18 @@
         </header>
         <div class="musicContent">
             <a href="javascript:" class="musicImg">
-                <img  src="https://y.gtimg.cn/music/photo_new/T002R300x300M0000011K2LD2aPDmu.jpg?max_age=2592000" alt="">
+                <img  :src='soundList.pic' alt="">
             </a>
             <div class="titles">
                 <h3 class="musicName">{{soundList.name}}</h3>
-                <div class="singerName">{{soundList.name}}</div>
+                <div class="singerName">{{soundList.author}}</div>
             </div>
         </div>
         <div class="w-progress">
-            <mProgress></mProgress>
+            <mProgress :source='soundList.source'></mProgress>
         </div>
 
         <div class="w-control">
-            <mControl></mControl>
            
         </div>
     </div>
@@ -26,7 +25,6 @@
 
 <script>
 import mProgress from './m-progress.vue';
-import mControl from './m-control.vue';
 import axios from 'axios';
 import qs from 'qs';
 
@@ -38,13 +36,17 @@ export default {
     },
     created () {
         var _this = this
-        var id = location.search;
-        var local_id=localStorage.getItem('sound_id');
-        id= id.substring(4,id.length)||local_id;
+        // var id = location.search;
+        // var local_id=localStorage.getItem('sound_id');
+        // id= id.substring(4,id.length)||local_id;
+        var id=this.$route.params.id;
+        id = id.substr(1,id.length)
+        console.log(id)
         localStorage.setItem('sound_id',id);
         axios.post('http://www.lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/sound/info?id="+id+"&comment=1"}))
         .then(function(res){
-            _this.soundList = res.data.info
+            _this.soundList = res.data.info;
+            _this.$children.$ref;
             console.log(_this.soundList)
         })
     },
@@ -53,8 +55,7 @@ export default {
         document.getElementById("onplay").style.height=orderHeight+'px';
   },
   components: {
-      mProgress,
-      mControl
+      mProgress
   }
 }
 </script>
