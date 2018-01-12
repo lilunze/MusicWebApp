@@ -22,7 +22,7 @@ const Routers=[
 		}
 	},
 	{
-		path:'/sound',
+		path:'/sound/:id',
 		component:function(resolve){
 			return require(['./views/v-sound/v-sound.vue'],resolve);
 		}
