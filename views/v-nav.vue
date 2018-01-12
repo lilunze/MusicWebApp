@@ -13,6 +13,7 @@
 <style scoped>
 	.nav
 	{
+		background: #fff;
 		width: 100%;
 		box-sizing: border-box;
 		padding: 0.5rem 0.5rem;
