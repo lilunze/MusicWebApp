@@ -1,5 +1,8 @@
 <template>
-	<v-nav></v-nav>
+	<div>
+		<v-nav></v-nav>
+	</div>
+	
 </template>
 <script>
 	import vNav from './v-nav.vue';

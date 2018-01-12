@@ -20,6 +20,12 @@ const Routers=[
 		component:function(resolve){
 			return require(['./views/index.vue'],resolve);
 		}
+	},
+	{
+		path:'/onplay',
+		component:function(resolve){
+			return require(['./views/onplay/onplay.vue'],resolve);
+		}
 	}
 	// {
 	// 	path:'/about',
