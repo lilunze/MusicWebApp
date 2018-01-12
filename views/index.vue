@@ -3,6 +3,7 @@
 		<v-nav></v-nav>
 		<v-tag-list></v-tag-list>
 		<v-carousel></v-carousel>
+		<v-sublist></v-sublist>
 		<v-daily-recommend></v-daily-recommend>
 		<v-daily-selection></v-daily-selection>
 	</div>
@@ -11,6 +12,7 @@
 	import vNav from './v-nav.vue';
 	import vTagList from './v-tag-list.vue';
 	import vCarousel from './v-carousel.vue';
+	import vSublist from './v-sublist.vue';
 	import vDailyRecommend from './v-daily-recommend.vue';
 	import vDailySelection from './v-daily-selection.vue';
 	export default {
@@ -19,6 +21,7 @@
 			vNav,
 			vTagList,
 			vCarousel,
+			vSublist,
 			vDailyRecommend,
 			vDailySelection
 		}
