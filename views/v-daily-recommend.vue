@@ -5,8 +5,8 @@
 			<li v-for="item in list">
 				<a :href="item.obj_id">
 					<p><img :src="item.sound.pic_200"></p>
-					<p>{{item.sound.name}}</p>
-					<p>{{item.sound.channel.name}}</p>
+					<p class="name">{{item.sound.name}}</p>
+					<p class="channel"><i class="cd"></i>{{item.sound.channel.name}}</p>
 				</a>
 			</li>
 		</ul>
@@ -27,6 +27,7 @@
 			.post('http://www.lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/recommend/sound-day?limit=6&page=1"}))
 			.then(function(res){
 				_this.list=res.data.list;
+				console.log(res);
 			})
 			.catch(function(err){
 				console.log(err)
@@ -42,17 +43,20 @@
 	}
 	.list h1
 	{
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		color: #313131;
+		margin: 0;
+		font-weight: normal;
 	}
 	.list h1 i
 	{
 		display: inline-block;
 		vertical-align: top;
-		width: 4rem;
-		height: 4rem;
+		width: 2rem;
+		height: 2rem;
 		background: url('/src/images/icon/icon-title.png');
 		background-size: 100% 100%;
+		margin: 0 1rem;
 	}
 	.list ul
 	{
@@ -64,11 +68,40 @@
 	{
 		display: inline-block;
 		vertical-align: top;
-		margin: 1rem 0.4rem;
-		width: 7rem;
+		margin: 0rem 0.4rem 1rem;
+		width: 6.6rem;
 	}
 	.list li img
 	{
 		width: 100%;
+	}
+	.list li a
+	{
+		font-size: 0.8rem;
+		text-align: left;
+		text-decoration: none;
+		color: #4f4f4f;
+	}
+	.name,.channel
+	{
+		height: 1.2rem;
+		line-height: 1.2rem;
+		overflow : hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+	.channel
+	{
+		color: #aaa;
+	}
+	.cd
+	{
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background: url(/src/images/icon/icon-cd.png);
+		background-size: 100% 100%;
 	}
 </style>
