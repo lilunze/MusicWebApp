@@ -3,11 +3,15 @@
 		<h1><i></i>每日精选<i></i></h1>
 		<ul>
 			<li v-for="(item,index) in list" v-if="index<6">
-				<a :href="item.id">
+				<a :href="'/sound/:'+item.id">
 					<p><img :src="item.pic_200"></p>
 					<p class="name">{{item.name}}</p>
 					<p class="channel">{{item.channel.name}}</p>
-					<p><span>{{item.like_count}}</span><span>{{item.share_count}}</span><span>{{item.comment_count}}</span></p>
+					<p class="like">
+						<span><i class="icon-like"></i>{{item.like_count}}</span>
+						<!-- <span><i class="icon-comment"></i>{{item.comment_count}}</span> -->
+						<!-- <span>{{item.share_count}}</span> -->
+					</p>
 				</a>
 			</li>
 		</ul>
@@ -41,12 +45,15 @@
 	.list
 	{
 		text-align: center;
+		background: #fff;
+		margin-top: 1rem;
 	}
 	.list h1
 	{
 		font-size: 1.2rem;
 		color: #313131;
 		margin: 0;
+		padding: 2rem 0 1rem;
 		font-weight: normal;
 	}
 	.list h1 i
@@ -105,5 +112,18 @@
 		height: 1rem;
 		background: url(/src/images/icon/icon-cd.png);
 		background-size: 100% 100%;
+	}
+	.icon-like
+	{
+		display: inline-block;
+		width: 0.8rem;
+		height: 0.8rem;
+		background: url(/src/images/icon/icon-like.png);
+		background-size: 100% 100%;
+		margin: 0.2rem 0.1rem 0 0;
+	}
+	.like
+	{
+		color: #aaa;
 	}
 </style>
