@@ -1,9 +1,21 @@
 <template>
 	<p class="sublist">
-		<span class="icon-album"></span>
-		<span class="icon-list"></span>
-		<span class="icon-fm"></span>
-		<span class="icon-channel"></span>
+		<span>
+			<i class="icon-album"></i>
+			<p>专辑</p>
+		</span>
+		<span>
+			<i class="icon-list"></i>
+			<p>歌单</p>
+		</span>
+		<span>
+			<i class="icon-fm"></i>
+			<p>频道</p>
+		</span>
+		<span>
+			<i class="icon-channel"></i>
+			<p>电台</p>
+		</span>
 	</p>
 </template>
 <script>
@@ -24,7 +36,19 @@
 		display: inline-block;
 		width: 2.6rem;
 		height: 2.6rem;
-		margin: 0 1rem;
+		margin: 0 1.4rem;
+		font-size: 0;
+	}
+	.sublist span p
+	{
+		font-size: 0.8rem;
+		line-height: 1.4rem;
+	}
+	.sublist i
+	{
+		display: inline-block;
+		width: 2.2rem;
+		height: 2.2rem;
 	}
 	.icon-album
 	{
