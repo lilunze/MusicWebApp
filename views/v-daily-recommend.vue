@@ -3,7 +3,7 @@
 		<h1><i></i>独家推荐<i></i></h1>
 		<ul>
 			<li v-for="item in list">
-				<a :href="item.obj_id">
+				<a :href="'/sound/:'+item.obj_id">
 					<p><img :src="item.sound.pic_200"></p>
 					<p class="name">{{item.sound.name}}</p>
 					<p class="channel"><i class="cd"></i>{{item.sound.channel.name}}</p>
@@ -40,12 +40,16 @@
 	.list
 	{
 		text-align: center;
+		background: #fff;
+		margin-top: 1rem;
+		padding-bottom: 0.6rem;
 	}
 	.list h1
 	{
 		font-size: 1.2rem;
 		color: #313131;
 		margin: 0;
+		padding: 2rem 0 1rem;
 		font-weight: normal;
 	}
 	.list h1 i
@@ -99,9 +103,10 @@
 	.cd
 	{
 		display: inline-block;
-		width: 1rem;
-		height: 1rem;
+		width: 0.6rem;
+		height: 0.6rem;
 		background: url(/src/images/icon/icon-cd.png);
 		background-size: 100% 100%;
+		margin-right: 0.1rem;
 	}
 </style>
