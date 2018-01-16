@@ -23,30 +23,53 @@ const Routers=[
 	},
 	{
 		path:'/sound/:id',
+		meta:{
+			title:'歌曲详情'
+		},
 		component:function(resolve){
 			return require(['./views/v-sound.vue'],resolve);
 		}
+	},
+	{
+		path:'/hot',
+		meta:{
+			title:'热门'
+		},
+		component:function(resolve)
+		{
+			return require(['./views/hot.vue'],resolve);
+		}
+	},
+	{
+		path:'/famous',
+		meta:{
+			title:'名人'
+		},
+		component:function(resolve)
+		{
+			return require(['./views/famous.vue'],resolve);
+		}
+	},
+	{
+		path:'/mv',
+		meta:{
+			title:'mv'
+		},
+		component:function(resolve)
+		{
+			return require(['./views/mv.vue'],resolve);
+		}
+	},
+	{
+		path:'/origin',
+		meta:{
+			title:'原创'
+		},
+		component:function(resolve)
+		{
+			return require(['./views/origin.vue'],resolve);
+		}
 	}
-	// {
-	// 	path:'/about',
-	// 	meta:{
-	// 		title:'关于我们'
-	// 	},
-	// 	component:function(resolve)
-	// 	{
-	// 		return require(['./views/about.vue'],resolve);
-	// 	}
-	// },
-	// {
-	// 	path:'/user/:id',
-	// 	meta:{
-	// 		title:'用户中心'
-	// 	},
-	// 	component:function(resolve)
-	// 	{
-	// 		return require(['./views/user.vue'],resolve);
-	// 	}
-	// }
 ];
 
 // 路由配置
