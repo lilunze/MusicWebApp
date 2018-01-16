@@ -12,31 +12,33 @@
 				[
 					{
 						title:'推荐',
-						src:''
+						src:'/index'
 					},
 					{
 						title:'热门',
-						src:''
+						src:'/hot'
 					},
 					{
 						title:'原创',
-						src:''
+						src:'/origin'
 					},
 					{
 						title:'MV',
-						src:''
+						src:'/mv'
 					},
 					{
 						title:'名人',
-						src:''
+						src:'/famous'
 					}
 				]
 			}
 		},
 		methods:{
 			handleClick:function(index){
-				console.log(index)
 				this.activeIndex=index;
+				var src=this.list[index]['src'];
+				this.$router.push(src);
+
 			}
 		}
 	}
