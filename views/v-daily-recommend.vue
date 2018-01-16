@@ -78,6 +78,7 @@
 	.list li img
 	{
 		width: 100%;
+		height: 6.6rem;
 	}
 	.list li a
 	{
