@@ -1,7 +1,5 @@
 <template>
 	<div>
-		<v-nav></v-nav>
-		<v-tag-list></v-tag-list>
 		<v-carousel></v-carousel>
 		<v-sublist></v-sublist>
 		<v-daily-recommend></v-daily-recommend>
@@ -18,8 +16,6 @@
 	export default {
 		components:
 		{
-			vNav,
-			vTagList,
 			vCarousel,
 			vSublist,
 			vDailyRecommend,
