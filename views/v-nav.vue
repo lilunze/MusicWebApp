@@ -1,13 +1,17 @@
 <template>
 	<div class="nav">
-		<i class="search"></i>
+		<i class="search" @click="handleSearch"></i>
 		<img src="/src/images/logo/logo-b.png" class="logo">
-		<i class="play"></i>
+		<a class="play" href="/sound/:538498"></a>
 	</div>
 </template>
 <script>
 	export default {
-
+		methods:{
+			handleSearch:function(){
+				
+			}
+		}
 	}
 </script>
 <style scoped>
