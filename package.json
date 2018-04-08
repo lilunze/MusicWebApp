@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --host 192.168.0.166 --open --history-api-fallback --config webpack.config.js",
-    "build": "webpack --progress --hide-modules --config webpack.prod.config.js"
+    "dev": "webpack-dev-server --host 192.168.0.155 --open --history-api-fallback --config webpack.config.js",
+    "build": "webpack --progress --hide-modules --config webpack.prod.config.js",
+    "start":"npm run dev"
   },
   "author": "lilunze",
   "license": "ISC",

@@ -1,21 +1,18 @@
 <template>
-	<tpl>
-		<div class="daily-rank">
-			<ul>
-				<li v-for="item in list">
-					<a :href="'/sound/:'+item.id" class="cover"><img :src="item.pic_200"></a>
-					<span class="info">
-						<p class="sound-name">{{item.name}}</p>
-						<p class="user"><img :src="item.user.avatar"><span>{{item.user.name}}</span></p>
-						<p class="hot-info"><i class="icon-like"></i><span class="text-like">{{item.like_count}}</span><i class="icon-download"></i><span class="text-download">{{item.download_count}}</span></p>
-					</span>
-				</li>
-			</ul>
-		</div>
-	</tpl>
+	<div class="daily-rank">
+		<ul>
+			<li v-for="item in list">
+				<a :href="'/sound/:'+item.id" class="cover"><img :src="item.pic_200"></a>
+				<span class="info">
+					<p class="sound-name">{{item.name}}</p>
+					<p class="user"><img :src="item.user.avatar"><span>{{item.user.name}}</span></p>
+					<p class="hot-info"><i class="icon-like"></i><span class="text-like">{{item.like_count}}</span><i class="icon-download"></i><span class="text-download">{{item.download_count}}</span></p>
+				</span>
+			</li>
+		</ul>
+	</div>
 </template>
 <script>
-	import tpl from './tpl.vue';
 	import axios from 'axios';
 	import qs from 'qs';
 	export default {

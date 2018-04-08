@@ -1,23 +1,21 @@
 <template>
-	<tpl>
-		<div class="list">
-			<div class="classify">
-				<p>推荐</p>
-				<p>群星</p>
-				<p>新入驻</p>
-				<p>分类</p>
-			</div>
-			<ul>
-				<li v-for="item in list">
-					<a :href="item.id">
-						<p><img :src="item.avatar_150"></p>
-						<p class="name">{{item.name}}</p>
-						<p class="channel">{{item.followed_count}} 人关注</p>
-					</a>
-				</li>
-			</ul>
+	<div class="list">
+		<div class="classify">
+			<p>推荐</p>
+			<p>群星</p>
+			<p>新入驻</p>
+			<p>分类</p>
 		</div>
-	</tpl>
+		<ul>
+			<li v-for="item in list">
+				<a :href="item.id">
+					<p><img :src="item.avatar_150"></p>
+					<p class="name">{{item.name}}</p>
+					<p class="channel">{{item.followed_count}} 人关注</p>
+				</a>
+			</li>
+		</ul>
+	</div>
 </template>
 <script>
 	import tpl from './tpl.vue';
