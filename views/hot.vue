@@ -29,7 +29,7 @@
 		mounted:function(){
 			var _this=this;
 			axios
-			.post('http://www.lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/rank/sound-hot?periods=daily&limit=12"}))
+			.post('http://lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/rank/sound-hot?periods=daily&limit=12"}))
 			.then(function(res){
 				_this.list=res.data.lists.daily;
 				console.log(_this.list);

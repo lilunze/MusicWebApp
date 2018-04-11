@@ -34,7 +34,7 @@
 		mounted:function(){
 			var _this=this;
 			axios
-			.post('http://www.lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/famous/famous-user?limit=9"}))
+			.post('http://lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/famous/famous-user?limit=9"}))
 			.then(function(res){
 				_this.list=res.data.lists;
 				console.log(_this.list);

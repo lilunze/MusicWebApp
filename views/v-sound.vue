@@ -57,7 +57,7 @@ export default {
       id = id.substr(1,id.length)
       console.log(id)
       localStorage.setItem('sound_id',id);
-      axios.post('http://www.lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/sound/info?id="+id+"&comment=1"}))
+      axios.post('http://api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/sound/info?id="+id+"&comment=1"}))
       .then(function(res){
           _this.soundList = res.data.info;
           _this.$children.$ref;

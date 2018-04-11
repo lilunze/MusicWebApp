@@ -30,7 +30,7 @@
 		{
 			var _this=this;
 			axios
-			.post('http://www.lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/other/index"}))
+			.post('http://lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/other/index"}))
 			.then(function(res){
 				_this.list=res.data.hot_recommend;
 				console.log(_this.list)

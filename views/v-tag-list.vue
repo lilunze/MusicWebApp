@@ -1,6 +1,6 @@
 <template>
 	<ul class="tag-list">
-		<li v-for="(item,index) in list"><span :class="{'active':activeIndex==index}" @click="handleClick(index)">{{item.title}}</span></li>
+		<li v-for="(item) in list"><router-link :to=item.src>{{item.title}}</router-link></li>
 	</ul>
 </template>
 <script>
@@ -34,12 +34,7 @@
 			}
 		},
 		methods:{
-			handleClick:function(index){
-				this.activeIndex=index;
-				var src=this.list[index]['src'];
-				this.$router.push(src);
-
-			}
+			
 		}
 	}
 </script>
@@ -58,16 +53,17 @@
 	{
 		display: inline-block;
 		width: 20%;
-		color: #4f4f4f;
 	}
-	.tag-list li span
+	.tag-list li a
 	{
 		display: inline-block;
 		padding: 0.2rem 0.4rem;
 		font-size: 1rem;
 		border-radius: 4px;
+		color: #4f4f4f;
+		text-decoration: none;
 	}
-	.tag-list li span.active
+	.tag-list li .router-link-active
 	{
 		background: #dc5050;
 		color: #fff;

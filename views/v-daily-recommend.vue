@@ -24,7 +24,7 @@
 		mounted:function(){
 			var _this=this;
 			axios
-			.post('http://www.lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/recommend/sound-day?limit=6&page=1"}))
+			.post('http://lilunze.me/api/echo/index.php',qs.stringify({'url':"http://www.app-echo.com/api/recommend/sound-day?limit=6&page=1"}))
 			.then(function(res){
 				_this.list=res.data.list;
 				console.log(res);
