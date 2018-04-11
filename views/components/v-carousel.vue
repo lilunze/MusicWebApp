@@ -19,23 +19,23 @@
                 list:
                 [
                     {
-                        href:'/sound/:1507279',
+                        href:'/sound/1507279',
                         src:'https://qn-qn-echo-image-cdn.app-echo.com/FiTasCFgLLsYpr1j8ahuHkXKNr6B.jpg?imageMogr2/auto-orient/quality/100%7CimageView2/4/w/640/q/100'
                     },
                     {
-                        href:'/sound/:1508864',
+                        href:'/sound/1508864',
                         src:'https://qn-qn-echo-image-cdn.app-echo.com/Fixe6DFO0JcLg5zIyKCGSj8noKqp.jpg?imageMogr2/auto-orient/quality/100%7CimageView2/4/w/640/q/100'
                     },
                     {
-                        href:'/sound/:1508513',
+                        href:'/sound/1508513',
                         src:'https://qn-qn-echo-image-cdn.app-echo.com/FiEW4fLo6g2wPDML4v5NwOHH43fJ.jpg?imageMogr2/auto-orient/quality/100%7CimageView2/4/w/640/q/100'
                     },
                     {
-                        href:'/sound/:1489985',
+                        href:'/sound/1489985',
                         src:'https://al-qn-echo-image-cdn.app-echo.com/Fj20s5N1mgTxkI0X10KTeHTsMWTF.jpg?imageMogr2/auto-orient/quality/100%7CimageView2/4/w/640/q/100'
                     },
                     {
-                        href:'/sound/:15007747',
+                        href:'/sound/15007747',
                         src:'https://qn-qn-echo-image-cdn.app-echo.com/FgLvBO2yBxKdJXQpF0MHH-B429iO.jpg?imageMogr2/auto-orient/quality/100%7CimageView2/4/w/640/q/100'
                     }
                 ]

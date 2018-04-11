@@ -3,7 +3,7 @@
 		<h1><i></i>独家推荐<i></i></h1>
 		<ul>
 			<li v-for="item in list">
-				<a :href="'/sound/:'+item.obj_id">
+				<a :href="'/sound/'+item.obj_id">
 					<p><img :src="item.sound.pic_200"></p>
 					<p class="name">{{item.sound.name}}</p>
 					<p class="channel"><i class="cd"></i>{{item.sound.channel.name}}</p>

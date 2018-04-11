@@ -3,7 +3,7 @@
 		<h1><i></i>每日精选<i></i></h1>
 		<ul>
 			<li v-for="(item,index) in list" v-if="index<6">
-				<a :href="'/sound/:'+item.id">
+				<a :href="'/sound/'+item.id">
 					<p><img :src="item.pic_200"></p>
 					<p class="name">{{item.name}}</p>
 					<p class="channel">{{item.channel.name}}</p>

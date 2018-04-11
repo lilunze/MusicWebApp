@@ -2,7 +2,7 @@
 	<div class="daily-rank">
 		<ul>
 			<li v-for="item in list">
-				<a :href="'/sound/:'+item.id" class="cover"><img :src="item.cover_url_260"></a>
+				<a :href="'/sound/'+item.id" class="cover"><img :src="item.cover_url_260"></a>
 				<span class="info">
 					<p class="sound-name">{{item.name}}</p>
 					<p class="user"><img :src="item.user.avatar"><span>{{item.user.name}}</span></p>

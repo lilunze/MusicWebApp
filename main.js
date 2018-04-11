@@ -23,70 +23,73 @@ const Routers=[
 	},
 	{
 		path:'/main',
-		meta:{
-			title:'moju music'
-		},
 		component:main,
 		children:[
 			{
 				path:'',
-				component:index
+				component:index,
+				meta:{
+					title:'moju music'
+				}
 			},
 			{
 				path:'index',
-				component:index
+				component:index,
+				meta:{
+					title:'moju music'
+				}
 			}
 		]
 	},
 	{
 		path:'/main',
-		meta:{
-			title:'热门'
-		},
 		component:main,
 		children:[
 			{
 				path:'hot',
-				component:hot
+				component:hot,
+				meta:{
+					title:'热门'
+				}
 			}
 		]
 	},
 	{
 		path:'/main',
-		meta:{
-			title:'名人'
-		},
 		component:main,
 		children:[
 			{
 				path:'famous',
-				component:famous
+				component:famous,
+				meta:{
+					title:'名人'
+				}
 			}
 		]
 	},
 	{
 		path:'/main',
-		meta:{
-			title:'mv'
-		},
 		component:main,
 		children:[
 			{
 				path:'mv',
-				component:mv
+				component:mv,
+				meta:{
+					title:'mv'
+				}
 			}
 		]
 	},
 	{
 		path:'/main',
-		meta:{
-			title:'原创'
-		},
 		component:main,
 		children:[
 			{
 				path:'origin',
-				component:origin
+				component:origin,
+				meta:{
+					title:'原创'
+				}
 			}
 		]
 	},
