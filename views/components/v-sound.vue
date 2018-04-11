@@ -22,7 +22,7 @@
           </p>
           <div class="controls">
             <span class="icon-prev"></span>
-            <span class="icon-pause" @click="onplay()"></span>
+            <span :class="isPlay?'icon-pause':'icon-play'" @click="onplay()"></span>
             <span class="icon-next"></span>
           </div>
         </div>
@@ -39,7 +39,8 @@ export default {
       return {
           soundList: {},
           timeStart:'00:00',
-          timeEnd: '00:00'
+          timeEnd: '00:00',
+          isPlay:false
       }
   },
   created () {
@@ -58,22 +59,30 @@ export default {
       })
   },
   methods: {
-    // onplay:function () {
-    // var method = this.$refs.audio.paused ? 'play':'pause';
-    //   this.$refs.audio[method]();
-    // },
+    onplay:function()
+    {
+	    var method = this.$refs.audio.paused ? 'play':'pause';
+	    this.$refs.audio[method]();
+	    this.isPlay=!this.isPlay;
+	    if(this.isPlay)
+	    {
+	    	// this.setTime();
+	    }
+	    else
+	    {
+	    	clearInterval(t)
+	    }
+    },
+    setTime:function(){
+    	var _this=this;
+    	var t=setInterval(function(){
+    		console.log(_this.$refs)
+    	},1000)
+    }
     // changeP:function () {
     //   var percent = (this.$refs.audio.currentTime/this.$refs.audio.duration)*100;
     //   console.log(percent)
     // },
-    // timeStar: function () {
-    //     var musicTime = this.$refs.audio.duration
-    //     var m = parseInt( musicTime / 60)
-    //     m = m < 10 ? '0' + m : m
-    //     var s = parseInt(musicTime % 60)
-    //     s = s < 10 ? '0' + s : s
-    //     return this.timeE =  m+":"+s
-    // }
   },
 	mounted () {
 		var _this=this;
