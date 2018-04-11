@@ -3,73 +3,100 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import App from './app.vue';
+// 引入组件
+import main from './views/main.vue';
+import index from './views/components/index.vue';
+import hot from './views/components/hot.vue';
+import famous from './views/components/famous.vue';
+import mv from './views/components/mv.vue';
+import origin from './views/components/origin.vue';
+import sound from './views/components/v-sound.vue';
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
+// 路由配置
 const Routers=[
 	{
 		path:'*',
-		redirect:'/index'
+		redirect:'/main/index'
 	},
 	{
-		path:'/index',
+		path:'/main',
 		meta:{
 			title:'moju music'
 		},
-		component:function(resolve){
-			return require(['./views/index.vue'],resolve);
-		}
+		component:main,
+		children:[
+			{
+				path:'',
+				component:index
+			},
+			{
+				path:'index',
+				component:index
+			}
+		]
+	},
+	{
+		path:'/main',
+		meta:{
+			title:'热门'
+		},
+		component:main,
+		children:[
+			{
+				path:'hot',
+				component:hot
+			}
+		]
+	},
+	{
+		path:'/main',
+		meta:{
+			title:'名人'
+		},
+		component:main,
+		children:[
+			{
+				path:'famous',
+				component:famous
+			}
+		]
+	},
+	{
+		path:'/main',
+		meta:{
+			title:'mv'
+		},
+		component:main,
+		children:[
+			{
+				path:'mv',
+				component:mv
+			}
+		]
+	},
+	{
+		path:'/main',
+		meta:{
+			title:'原创'
+		},
+		component:main,
+		children:[
+			{
+				path:'origin',
+				component:origin
+			}
+		]
 	},
 	{
 		path:'/sound/:id',
 		meta:{
 			title:'歌曲详情'
 		},
-		component:function(resolve){
-			return require(['./views/v-sound.vue'],resolve);
-		}
+		component:sound
 	},
-	{
-		path:'/hot',
-		meta:{
-			title:'热门'
-		},
-		component:function(resolve)
-		{
-			return require(['./views/hot.vue'],resolve);
-		}
-	},
-	{
-		path:'/famous',
-		meta:{
-			title:'名人'
-		},
-		component:function(resolve)
-		{
-			return require(['./views/famous.vue'],resolve);
-		}
-	},
-	{
-		path:'/mv',
-		meta:{
-			title:'mv'
-		},
-		component:function(resolve)
-		{
-			return require(['./views/mv.vue'],resolve);
-		}
-	},
-	{
-		path:'/origin',
-		meta:{
-			title:'原创'
-		},
-		component:function(resolve)
-		{
-			return require(['./views/origin.vue'],resolve);
-		}
-	}
 ];
 
 // 路由配置
@@ -104,9 +131,6 @@ const store=new Vuex.Store({
 		
 	}
 })
-
-
-
 
 
 new Vue({

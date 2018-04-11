@@ -12,23 +12,23 @@
 				[
 					{
 						title:'推荐',
-						src:'/index'
+						src:'/main/index'
 					},
 					{
 						title:'热门',
-						src:'/hot'
+						src:'/main/hot'
 					},
 					{
 						title:'原创',
-						src:'/origin'
+						src:'/main/origin'
 					},
 					{
 						title:'MV',
-						src:'/mv'
+						src:'/main/mv'
 					},
 					{
 						title:'名人',
-						src:'/famous'
+						src:'/main/famous'
 					}
 				]
 			}

@@ -13,13 +13,12 @@
 	</div>
 </template>
 <script>
-	import tpl from './tpl.vue';
 	import axios from 'axios';
 	import qs from 'qs';
 	export default {
 		components:
 		{
-			tpl
+			
 		},
 		data:function(){
 			return {
