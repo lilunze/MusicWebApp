@@ -76,13 +76,14 @@ export default {
     setTime:function(){
     	var _this=this;
     	var t=setInterval(function(){
-    		console.log(_this.$refs)
+    		// console.log(_this.$refs)
+    		_this.setProgress();
     	},1000)
-    }
-    // changeP:function () {
-    //   var percent = (this.$refs.audio.currentTime/this.$refs.audio.duration)*100;
-    //   console.log(percent)
-    // },
+    },
+    setProgress:function () {
+      var percent = (this.$refs.audio.currentTime/this.$refs.audio.duration)*100;
+      console.log(percent)
+    },
   },
 	mounted () {
 		var _this=this;
@@ -173,6 +174,7 @@ export default {
 	width: 18rem;
 	margin: 0 auto;
 	line-height: 3rem;
+	color: #999;
 }
 .times::after {
     content: '';
@@ -180,7 +182,7 @@ export default {
     height: 0;
     clear: both;
     visibility: hidden;
-    color: #666;
+    color: #999;
 }
 .time-start 
 {
